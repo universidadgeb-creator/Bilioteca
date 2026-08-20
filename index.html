@@ -81,24 +81,6 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text-dark
 .loading-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 20px;color:var(--text-light);}
 .loading-screen .spinner{border:3px solid rgba(0,0,0,0.1);border-top-color:var(--gold);width:36px;height:36px;margin-bottom:16px;}
 .loading-screen p{font-size:14px;}
-.fisico-filter-row{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
-.fisico-filter-btn{padding:5px 14px;font-size:12px;font-weight:700;font-family:'Lato',sans-serif;background:#fff;border:1px solid rgba(0,0,0,0.12);border-radius:6px;cursor:pointer;color:var(--text-mid);transition:all 0.2s;}
-.fisico-filter-btn.active{background:var(--navy);color:var(--gold-light);border-color:var(--navy);}
-.fisico-filter-btn:hover{border-color:var(--gold);}
-.fisico-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;}
-.fisico-card{background:#fff;border-radius:10px;border:1px solid rgba(0,0,0,0.08);overflow:hidden;transition:transform 0.18s;display:flex;flex-direction:column;}
-.fisico-card:hover{transform:translateY(-3px);}
-.fisico-cover{height:180px;position:relative;overflow:hidden;flex-shrink:0;}
-.fisico-cover-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px;text-align:center;}
-.fisico-cover-title{font-family:'Playfair Display',serif;font-size:12px;font-weight:700;line-height:1.3;}
-.fisico-status-badge{position:absolute;top:8px;left:8px;z-index:3;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:0.3px;}
-.badge-disponible{background:#dcfce7;color:#166534;}
-.badge-rentado{background:#fef3c7;color:#92400e;}
-.fisico-info{padding:11px 13px 13px;flex:1;display:flex;flex-direction:column;gap:3px;}
-.fisico-title{font-size:13px;font-weight:700;color:var(--text-dark);line-height:1.3;}
-.fisico-author{font-size:11px;color:var(--text-light);}
-.fisico-cat-badge{display:inline-block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;padding:2px 7px;border-radius:4px;margin-top:2px;}
-.fisico-rentado-info{margin-top:7px;background:#fef3c7;border-radius:6px;padding:7px 9px;font-size:11px;color:#92400e;line-height:1.5;}
 .sug-section{max-width:660px;}
 .sug-intro{font-size:14px;color:var(--text-mid);margin-bottom:20px;line-height:1.6;}
 .sug-form{background:#fff;border:1px solid rgba(0,0,0,0.1);border-radius:12px;padding:24px;}
@@ -195,10 +177,6 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text-dark
 .edit-modal-header h3{font-family:'Playfair Display',serif;font-size:15px;color:#fff;font-weight:500;display:flex;align-items:center;gap:8px;}
 .edit-modal-header h3 i{color:var(--gold);}
 .edit-body{padding:20px;}
-.checkbox-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;font-size:13px;}
-.checkbox-row input[type=checkbox]{width:16px;height:16px;accent-color:var(--navy);}
-.rentado-fields{background:var(--cream-dark);border-radius:8px;padding:12px;margin-bottom:10px;display:none;}
-.rentado-fields.show{display:block;}
 .confirm-overlay{display:none;position:fixed;inset:0;background:rgba(15,24,41,0.6);z-index:500;align-items:center;justify-content:center;padding:20px;}
 .confirm-overlay.open{display:flex;}
 .confirm-box{background:#fff;border-radius:10px;border:1px solid var(--gold);width:100%;max-width:340px;}
@@ -234,7 +212,6 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text-dark
 .home-card:hover{transform:translateY(-7px);box-shadow:0 30px 64px rgba(0,0,0,0.52);border-color:rgba(201,168,76,0.5);}
 .home-card-icon{width:62px;height:62px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:31px;margin-bottom:18px;box-shadow:0 6px 18px rgba(0,0,0,0.35);}
 .home-card.digital .home-card-icon{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy-deep);}
-.home-card.fisica .home-card-icon{background:linear-gradient(135deg,#26395f,#33497a);color:var(--gold-light);border:1px solid rgba(201,168,76,0.4);}
 .home-card h2{font-family:'Playfair Display',serif;font-size:23px;color:#fff;margin-bottom:9px;font-weight:700;}
 .home-card>p{font-size:14px;color:#b3c0d4;line-height:1.6;margin-bottom:20px;flex:1;}
 .home-card-stats{display:flex;gap:24px;margin-bottom:22px;}
@@ -242,10 +219,8 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text-dark
 .home-card-stat span{font-size:10px;color:#8da0bd;text-transform:uppercase;letter-spacing:0.6px;font-weight:700;}
 .home-card-cta{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font-weight:700;font-size:13px;padding:11px 22px;border-radius:10px;transition:gap .22s,background .22s,box-shadow .22s;}
 .home-card.digital .home-card-cta{background:var(--gold);color:var(--navy-deep);}
-.home-card.fisica .home-card-cta{background:transparent;color:var(--gold-light);border:1px solid var(--gold);}
 .home-card:hover .home-card-cta{gap:14px;}
 .home-card.digital:hover .home-card-cta{box-shadow:0 6px 18px rgba(201,168,76,0.4);}
-.home-card.fisica:hover .home-card-cta{background:rgba(201,168,76,0.12);}
 .home-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:900px;margin:26px auto 0;padding:0 32px;}
 .home-stat-pill{flex:1;min-width:200px;max-width:330px;display:flex;align-items:center;gap:13px;background:#1c2c4a;border:1px solid rgba(201,168,76,0.18);border-radius:14px;padding:15px 18px;box-shadow:0 6px 18px rgba(0,0,0,0.3);}
 .home-stat-pill i{font-size:24px;color:var(--navy-deep);background:linear-gradient(135deg,var(--gold),var(--gold-light));width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
@@ -265,15 +240,6 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text-dark
 .home-banner-cta{display:inline-flex;align-items:center;gap:8px;background:var(--navy-deep);color:var(--gold-light);font-weight:700;font-size:13px;padding:11px 20px;border-radius:10px;white-space:nowrap;}
 .home-footer{text-align:center;margin-top:38px;padding:0 32px;font-size:12px;color:#7d8fab;letter-spacing:0.5px;}
 @media(max-width:560px){.home-hero{padding:46px 22px 120px;}.home-cards,.home-strip,.home-section,.home-banner{padding-left:18px;padding-right:18px;}.home-banner{margin-left:18px;margin-right:18px;padding-left:22px;padding-right:22px;}}
-/* ── Botón flotante WhatsApp (Colección física) ── */
-.wa-fab{position:fixed;bottom:22px;right:22px;z-index:150;display:inline-flex;align-items:center;gap:12px;background:var(--navy-deep);color:var(--gold-light);border:1px solid var(--gold);border-radius:40px;padding:12px 22px 12px 13px;font-family:'Lato',sans-serif;font-size:14px;font-weight:400;text-decoration:none;box-shadow:0 12px 32px rgba(0,0,0,0.35);transition:transform .25s,box-shadow .25s;max-width:310px;animation:waPop .5s ease;}
-.wa-fab:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(0,0,0,0.45);border-color:var(--gold-light);}
-.wa-fab-text{line-height:1.3;}
-.wa-fab-text b{color:var(--gold);font-weight:700;}
-.wa-fab-icon{width:40px;height:40px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:23px;flex-shrink:0;animation:waPulse 2.4s infinite;}
-@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.45);}70%{box-shadow:0 0 0 13px rgba(37,211,102,0);}100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}}
-@keyframes waPop{from{opacity:0;transform:translateY(18px) scale(.92);}to{opacity:1;transform:translateY(0) scale(1);}}
-@media(max-width:560px){.wa-fab{left:14px;right:14px;bottom:14px;justify-content:center;max-width:none;padding:12px 16px;}}
 </style>
 </head>
 <body>
@@ -290,7 +256,6 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text-dark
     <div class="lib-header-right">
       <button class="lib-nav-btn" id="btnHome" onclick="showView('home')"><i class="ti ti-home"></i> Inicio</button>
       <button class="lib-nav-btn" id="btnCatalogo" onclick="showView('catalogo')"><i class="ti ti-device-laptop"></i> Digital</button>
-      <button class="lib-nav-btn" id="btnFisico" onclick="showView('fisico')"><i class="ti ti-books"></i> Colección física</button>
       <button class="lib-nav-btn" id="btnSugerencias" onclick="showView('sugerencias')"><i class="ti ti-message-plus"></i> Sugerir</button>
       <button class="lib-nav-btn" id="btnAdmin" onclick="openAdmin()"><i class="ti ti-settings"></i> Administrar</button>
     </div>
@@ -319,7 +284,7 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text-dark
   <section class="home-hero">
     <span class="home-hero-badge"><i class="ti ti-sparkles"></i> GEB University</span>
     <h1>Tu próxima gran lectura<br>empieza <span class="accent">aquí</span></h1>
-    <p>Bienvenido a la Biblioteca GEB. Lee al instante desde nuestra colección digital o solicita un libro físico en préstamo. Aprender con propósito, a tu ritmo.</p>
+    <p>Bienvenido a la Biblioteca GEB. Lee al instante desde nuestra colección digital, cuando quieras. Aprender con propósito, a tu ritmo.</p>
   </section>
 
   <div class="home-cards">
@@ -332,15 +297,6 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text-dark
         <div class="home-card-stat"><b id="homeDigCat">0</b><span>Categorías</span></div>
       </div>
       <span class="home-card-cta">Explorar catálogo <i class="ti ti-arrow-right"></i></span>
-    </div>
-    <div class="home-card fisica" onclick="showView('fisico')">
-      <div class="home-card-icon"><i class="ti ti-books"></i></div>
-      <h2>Colección Física</h2>
-      <p>Libros disponibles en nuestras instalaciones para llevar a casa. Consulta la disponibilidad y solicita tu préstamo.</p>
-      <div class="home-card-stats">
-        <div class="home-card-stat"><b id="homeFisCount">0</b><span>Títulos</span></div>
-      </div>
-      <span class="home-card-cta">Ver colección <i class="ti ti-arrow-right"></i></span>
     </div>
   </div>
 
@@ -375,27 +331,6 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text-dark
   <div class="lib-empty" id="emptyState" style="display:none;"><i class="ti ti-search"></i><p>No se encontraron libros.</p></div>
 </div>
 
-<div class="lib-body" id="viewFisico" style="display:none;">
-  <div class="section-header">
-    <div>
-      <span class="section-title">Colección Física</span>
-      <p style="font-size:13px;color:var(--text-mid);margin-top:4px;">Libros disponibles en nuestras instalaciones para préstamo.</p>
-    </div>
-    <span class="section-badge" id="fisicoCount"></span>
-  </div>
-  <div class="fisico-filter-row">
-    <span style="font-size:12px;font-weight:700;color:var(--text-mid);text-transform:uppercase;letter-spacing:0.5px;">Filtrar:</span>
-    <button class="fisico-filter-btn active" id="fBtnTodos" onclick="setFiltroFisico('todos')">Todos</button>
-    <button class="fisico-filter-btn" id="fBtnDisp" onclick="setFiltroFisico('disponible')">✅ Disponibles</button>
-    <button class="fisico-filter-btn" id="fBtnRent" onclick="setFiltroFisico('rentado')">📖 En préstamo</button>
-  </div>
-  <div class="fisico-grid" id="fisicoGrid"></div>
-  <div class="lib-empty" id="fisicoEmpty" style="display:none;"><i class="ti ti-books"></i><p>No hay libros en esta categoría.</p></div>
-  <a class="wa-fab" href="https://api.whatsapp.com/send/?phone=523316717233&text=Hola%2C+me+interesa+rentar+un+libro.&type=phone_number&app_absent=0" target="_blank" rel="noopener">
-    <span class="wa-fab-icon"><i class="ti ti-brand-whatsapp"></i></span>
-    <span class="wa-fab-text">¿Quieres rentar un libro físico?<br><b>Da clic aquí</b></span>
-  </a>
-</div>
 
 <div class="lib-body" id="viewSugerencias" style="display:none;">
   <div class="sug-section">
@@ -446,7 +381,6 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text-dark
       <div id="adminPanel" style="display:none;">
         <div class="admin-tabs">
           <button class="admin-tab active" id="atab-digital" onclick="switchAdminTab('digital')"><i class="ti ti-device-laptop"></i> Digital</button>
-          <button class="admin-tab" id="atab-fisico" onclick="switchAdminTab('fisico')"><i class="ti ti-books"></i> Físicos</button>
           <button class="admin-tab" id="atab-categorias" onclick="switchAdminTab('categorias')"><i class="ti ti-tag"></i> Categorías</button>
           <button class="admin-tab" id="atab-registros" onclick="switchAdminTab('registros')"><i class="ti ti-eye"></i> Accesos</button>
           <button class="admin-tab" id="atab-sugerencias" onclick="switchAdminTab('sugerencias')"><i class="ti ti-message"></i> Sugerencias <span class="badge-sug" id="sugBadge" style="display:none;"></span></button>
@@ -477,28 +411,6 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text-dark
           <div class="admin-section">
             <div class="admin-section-title"><i class="ti ti-list"></i> Libros digitales <span id="adminBookCount" style="font-size:12px;color:var(--text-light);font-family:'Lato',sans-serif;font-weight:400;"></span></div>
             <div class="admin-book-list-wrap" id="adminBookList"></div>
-          </div>
-        </div>
-        <div class="admin-pane" id="apane-fisico">
-          <div class="admin-section">
-            <div class="admin-section-title"><i class="ti ti-plus"></i> Agregar libro físico</div>
-            <div class="admin-form-row"><label>Título *</label><input class="admin-input" type="text" id="fNewTitle" placeholder="Título del libro"></div>
-            <div class="admin-form-row"><label>Autor *</label><input class="admin-input" type="text" id="fNewAuthor" placeholder="Nombre del autor"></div>
-            <div class="admin-form-row"><label>Categoría</label><select class="admin-input" id="fNewCat"></select></div>
-            <div class="admin-form-row"><label>Descripción</label><input class="admin-input" type="text" id="fNewDesc" placeholder="Una línea sobre el libro"></div>
-            <div class="admin-form-row">
-              <label>Portada (URL de imagen)</label>
-              <div class="cover-preview-wrap">
-                <input class="admin-input" type="text" id="fNewCover" placeholder="https://..." oninput="previewCover('fNewCover','fCoverPreview')" style="margin-bottom:0;">
-                <img class="cover-preview-img" id="fCoverPreview" alt="">
-              </div>
-            </div>
-            <button class="admin-submit-btn" onclick="addFisico()"><i class="ti ti-plus"></i> Agregar</button>
-            <p class="admin-err" id="fAddErr"></p>
-          </div>
-          <div class="admin-section">
-            <div class="admin-section-title"><i class="ti ti-list"></i> Colección física <span id="adminFisicoCount" style="font-size:12px;color:var(--text-light);font-family:'Lato',sans-serif;font-weight:400;"></span></div>
-            <div class="admin-book-list-wrap" id="adminFisicoList"></div>
           </div>
         </div>
         <div class="admin-pane" id="apane-categorias">
@@ -554,30 +466,6 @@ body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text-dark
   </div>
 </div>
 
-<div class="edit-overlay" id="fEditOverlay">
-  <div class="edit-modal">
-    <div class="edit-modal-header"><h3><i class="ti ti-edit"></i> Editar libro físico</h3><button class="admin-close-btn" onclick="closeEditModal('fEdit')"><i class="ti ti-x"></i></button></div>
-    <div class="edit-body">
-      <input type="hidden" id="fEditId">
-      <div class="admin-form-row"><label>Título *</label><input class="admin-input" type="text" id="fEditTitle"></div>
-      <div class="admin-form-row"><label>Autor *</label><input class="admin-input" type="text" id="fEditAuthor"></div>
-      <div class="admin-form-row"><label>Categoría</label><select class="admin-input" id="fEditCat"></select></div>
-      <div class="admin-form-row"><label>Descripción</label><input class="admin-input" type="text" id="fEditDesc"></div>
-      <div class="admin-form-row"><label>Portada (URL)</label><div class="cover-preview-wrap"><input class="admin-input" type="text" id="fEditCover" oninput="previewCover('fEditCover','fEditCoverPreview')" style="margin-bottom:0;"><img class="cover-preview-img" id="fEditCoverPreview" alt=""></div></div>
-      <div class="admin-form-row">
-        <div class="checkbox-row"><input type="checkbox" id="fEditDisponible" onchange="toggleRentadoFields()"><label for="fEditDisponible" style="font-size:13px;font-weight:700;color:var(--text-dark);text-transform:none;letter-spacing:0;">Actualmente en préstamo</label></div>
-        <div class="rentado-fields" id="rentadoFields">
-          <div class="admin-form-row"><label>Prestado a</label><input class="admin-input" type="text" id="fEditRentadoPor" placeholder="Nombre de quien lo tiene" style="margin-bottom:8px;"></div>
-          <div class="admin-form-row"><label>Sucursal</label><input class="admin-input" type="text" id="fEditSucursal" placeholder="Sucursal o club" style="margin-bottom:8px;"></div>
-          <div class="admin-form-row"><label>Fecha de devolución</label><input class="admin-input" type="date" id="fEditFecha" style="margin-bottom:0;"></div>
-        </div>
-      </div>
-      <p class="admin-err" id="fEditErr"></p>
-      <button class="admin-submit-btn" onclick="saveFisicoEdit()"><i class="ti ti-device-floppy"></i> Guardar cambios</button>
-    </div>
-  </div>
-</div>
-
 <div class="confirm-overlay" id="confirmOverlay">
   <div class="confirm-box">
     <div class="confirm-box-header"><i class="ti ti-alert-triangle"></i><span>Confirmar eliminación</span></div>
@@ -608,12 +496,10 @@ const CAT_PALETTES = [
 
 let CATEGORIES = [{"id": "todos", "label": "Todos", "protected": true}, {"id": "liderazgo", "label": "Liderazgo", "protected": true}, {"id": "habitos", "label": "Hábitos y productividad", "protected": true}, {"id": "ventas", "label": "Ventas y negociación", "protected": true}, {"id": "bienestar", "label": "Bienestar y salud mental", "protected": true}, {"id": "cultura", "label": "Cultura organizacional", "protected": true}, {"id": "comunicacion", "label": "Comunicación", "protected": true}, {"id": "ficcion", "label": "Ficción", "protected": true}, {"id": "historia", "label": "Historia", "protected": false}, {"id": "ciencia_fic", "label": "Ciencia ficción", "protected": false}, {"id": "filosofia", "label": "Filosofía", "protected": false}];
 let books = [{"id": 1, "title": "El líder que no tenía cargo", "author": "Robin Sharma", "cat": "liderazgo", "desc": "Liderazgo desde cualquier posición.", "link": "", "cover": "", "added": "2024-01-01"}, {"id": 2, "title": "Las 21 leyes irrefutables del liderazgo", "author": "John C. Maxwell", "cat": "liderazgo", "desc": "Principios fundamentales del liderazgo efectivo.", "link": "", "cover": "", "added": "2024-01-02"}, {"id": 3, "title": "Cómo ganar amigos e influir en las personas", "author": "Dale Carnegie", "cat": "comunicacion", "desc": "El clásico sobre relaciones humanas.", "link": "", "cover": "", "added": "2024-01-03"}, {"id": 4, "title": "Hábitos atómicos", "author": "James Clear", "cat": "habitos", "desc": "Pequeños cambios con resultados extraordinarios.", "link": "", "cover": "", "added": "2024-01-04"}, {"id": 5, "title": "El efecto compuesto", "author": "Darren Hardy", "cat": "habitos", "desc": "El poder de las decisiones cotidianas.", "link": "", "cover": "", "added": "2024-01-05"}, {"id": 6, "title": "Vende o venderán", "author": "Grant Cardone", "cat": "ventas", "desc": "Todos somos vendedores en algún momento.", "link": "", "cover": "", "added": "2024-01-06"}, {"id": 7, "title": "Negociar con ventaja", "author": "G. Richard Shell", "cat": "ventas", "desc": "Estrategias de negociación para personas inteligentes.", "link": "", "cover": "", "added": "2024-01-07"}, {"id": 8, "title": "Empresas que perduran", "author": "Jim Collins", "cat": "cultura", "desc": "Principios de las organizaciones visionarias.", "link": "", "cover": "", "added": "2024-01-08"}, {"id": 9, "title": "El hombre en busca de sentido", "author": "Viktor Frankl", "cat": "bienestar", "desc": "Encontrar propósito en cualquier circunstancia.", "link": "", "cover": "", "added": "2024-01-09"}, {"id": 10, "title": "Inteligencia emocional", "author": "Daniel Goleman", "cat": "bienestar", "desc": "El poder de las emociones en el éxito.", "link": "", "cover": "", "added": "2024-01-10"}, {"id": 11, "title": "Comunicación no violenta", "author": "Marshall Rosenberg", "cat": "comunicacion", "desc": "Un lenguaje para la vida y las relaciones.", "link": "", "cover": "", "added": "2024-01-11"}, {"id": 12, "title": "El alquimista", "author": "Paulo Coelho", "cat": "ficcion", "desc": "Una fábula sobre seguir los sueños propios.", "link": "", "cover": "", "added": "2024-01-12"}, {"id": 13, "title": "La sombra del viento", "author": "Carlos Ruiz Zafón", "cat": "ficcion", "desc": "Un misterio literario en la Barcelona de posguerra.", "link": "", "cover": "", "added": "2024-01-13"}, {"id": 14, "title": "Sapiens", "author": "Yuval Noah Harari", "cat": "historia", "desc": "Breve historia de la humanidad.", "link": "", "cover": "", "added": "2024-01-14"}, {"id": 15, "title": "1984", "author": "George Orwell", "cat": "ciencia_fic", "desc": "Distopía clásica sobre el control totalitario.", "link": "", "cover": "", "added": "2024-01-15"}, {"id": 16, "title": "El mundo de Sofía", "author": "Jostein Gaarder", "cat": "filosofia", "desc": "Una novela que recorre la historia de la filosofía.", "link": "", "cover": "", "added": "2024-01-16"}, {"id": 17, "title": "Pensar rápido, pensar despacio", "author": "Daniel Kahneman", "cat": "habitos", "desc": "Los dos sistemas que dirigen la mente humana.", "link": "", "cover": "", "added": "2024-01-17"}];
-let fisicos = [{"id": 1, "title": "Hábitos atómicos", "author": "James Clear", "cat": "habitos", "desc": "Pequeños cambios con resultados extraordinarios.", "cover": "", "disponible": true, "rentadoPor": "", "sucursal": "", "fechaDevolucion": ""}, {"id": 2, "title": "El efecto compuesto", "author": "Darren Hardy", "cat": "habitos", "desc": "El poder de las decisiones cotidianas.", "cover": "", "disponible": true, "rentadoPor": "", "sucursal": "", "fechaDevolucion": ""}, {"id": 3, "title": "El alquimista", "author": "Paulo Coelho", "cat": "ficcion", "desc": "Una fábula sobre seguir los sueños propios.", "cover": "", "disponible": true, "rentadoPor": "", "sucursal": "", "fechaDevolucion": ""}, {"id": 4, "title": "Inteligencia emocional", "author": "Daniel Goleman", "cat": "bienestar", "desc": "El poder de las emociones en el éxito.", "cover": "", "disponible": true, "rentadoPor": "", "sucursal": "", "fechaDevolucion": ""}];
-
 books.forEach(b=>{b.fav=false;});
 let sugerencias=[], registros=[];
-let nextId=18, nextFisicoId=10, nextCatId=100, nextSugId=1;
-let activeTab='todos', loggedIn=false, currentView='home', filtroFisico='todos';
+let nextId=18, nextCatId=100, nextSugId=1;
+let activeTab='todos', loggedIn=false, currentView='home';
 let pendingAction=null, _confirmCallback=null;
 const coverCache={};
 
@@ -634,16 +520,6 @@ function sheetToBooks(rows){
     const o={};h.forEach((k,i)=>o[k]=r[i]||'');
     o.id=parseInt(o.id)||0;
     o.fav=false;
-    return o;
-  });
-}
-function sheetToFisicos(rows){
-  if(!rows||rows.length<2) return [];
-  const h=rows[0];
-  return rows.slice(1).filter(r=>r[0]).map(r=>{
-    const o={};h.forEach((k,i)=>o[k]=r[i]||'');
-    o.id=parseInt(o.id)||0;
-    o.disponible=o.disponible==='TRUE'||o.disponible===true||o.disponible==='true';
     return o;
   });
 }
@@ -681,11 +557,6 @@ function booksToSheet(arr){
   const rows=arr.map(b=>h.map(k=>b[k]===undefined?'':b[k]));
   return [h,...rows];
 }
-function fisicosToSheet(arr){
-  const h=['id','title','author','cat','desc','cover','disponible','rentadoPor','sucursal','fechaDevolucion'];
-  const rows=arr.map(b=>h.map(k=>b[k]===undefined?'':String(b[k])));
-  return [h,...rows];
-}
 function catsToSheet(arr){
   const h=['id','label','protected'];
   const rows=arr.map(b=>h.map(k=>b[k]===undefined?'':String(b[k])));
@@ -708,12 +579,10 @@ async function loadFromSheets(){
     const r=await fetch(SCRIPT_URL);
     const data=await r.json();
     if(data.Libros){const b=sheetToBooks(data.Libros);if(b.length)books=b;}
-    if(data.Fisicos){const f=sheetToFisicos(data.Fisicos);if(f.length)fisicos=f;}
     if(data.Categorias){const c=sheetToCats(data.Categorias);if(c&&c.length)CATEGORIES=c;}
     if(data.Sugerencias){sugerencias=sheetToSugs(data.Sugerencias);}
     if(data.Registros){registros=sheetToRegs(data.Registros);}
     nextId=Math.max(...books.map(b=>b.id),17)+1;
-    nextFisicoId=Math.max(...fisicos.map(f=>f.id),5)+1;
     nextSugId=Math.max(...sugerencias.map(s=>s.id),0)+1;
   }catch(e){
     console.warn('No se pudo cargar de Sheets, usando datos locales',e);
@@ -736,7 +605,6 @@ async function saveSheet(sheetName, data){
 }
 
 async function saveBooks(){await saveSheet('Libros',booksToSheet(books));}
-async function saveFisicos(){await saveSheet('Fisicos',fisicosToSheet(fisicos));}
 async function saveCats(){await saveSheet('Categorias',catsToSheet(CATEGORIES));}
 async function saveSugs(){await saveSheet('Sugerencias',sugsToSheet(sugerencias));}
 async function saveRegs(){await saveSheet('Registros',regsToSheet(registros));}
@@ -790,7 +658,7 @@ function previewCover(inputId,previewId){
 // ── VIEWS ──
 function showView(v){
   currentView=v;
-  ['home','catalogo','fisico','sugerencias'].forEach(x=>{
+  ['home','catalogo','sugerencias'].forEach(x=>{
     const el=document.getElementById('view'+x.charAt(0).toUpperCase()+x.slice(1));
     if(el)el.style.display=x===v?'block':'none';
   });
@@ -798,11 +666,9 @@ function showView(v){
   document.getElementById('catsWrap').style.display=v==='catalogo'?'flex':'none';
   const bh=document.getElementById('btnHome');if(bh)bh.classList.toggle('active',v==='home');
   document.getElementById('btnCatalogo').classList.toggle('active',v==='catalogo');
-  document.getElementById('btnFisico').classList.toggle('active',v==='fisico');
   document.getElementById('btnSugerencias').classList.toggle('active',v==='sugerencias');
   if(v==='home')renderHome();
   if(v==='sugerencias')renderSugCatSelect();
-  if(v==='fisico')renderFisicos();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
@@ -810,7 +676,6 @@ function showView(v){
 function renderHome(){
   animateCount('homeDigCount',books.length);
   animateCount('homeDigCat',CATEGORIES.filter(c=>c.id!=='todos').length);
-  animateCount('homeFisCount',fisicos.length);
   animateCount('statTotal',35);
   animateCount('statCat',10);
   const chips=document.getElementById('homeCatChips');
@@ -927,45 +792,6 @@ async function confirmReg(){
   }
 }
 
-// ── FÍSICA ──
-function setFiltroFisico(f){
-  filtroFisico=f;
-  ['Todos','Disp','Rent'].forEach(x=>document.getElementById('fBtn'+x).classList.remove('active'));
-  document.getElementById('fBtn'+{todos:'Todos',disponible:'Disp',rentado:'Rent'}[f]).classList.add('active');
-  renderFisicos();
-}
-function renderFisicos(){
-  let filtered=fisicos;
-  if(filtroFisico==='disponible')filtered=fisicos.filter(f=>f.disponible===true||f.disponible==='true'||f.disponible==='TRUE');
-  if(filtroFisico==='rentado')filtered=fisicos.filter(f=>f.disponible===false||f.disponible==='false'||f.disponible==='FALSE');
-  document.getElementById('fisicoCount').textContent=`${filtered.length} libro${filtered.length!==1?'s':''}`;
-  const grid=document.getElementById('fisicoGrid'),empty=document.getElementById('fisicoEmpty');
-  if(!filtered.length){grid.innerHTML='';empty.style.display='block';return;}
-  empty.style.display='none';
-  grid.innerHTML=filtered.map(b=>{
-    const cc=getCatColor(b.cat);
-    const catLabel=CATEGORIES.find(c=>c.id===b.cat)?.label||b.cat;
-    const disp=b.disponible===true||b.disponible==='true'||b.disponible==='TRUE';
-    const statusBadge=disp
-      ?`<span class="fisico-status-badge badge-disponible"><i class="ti ti-check"></i> Disponible</span>`
-      :`<span class="fisico-status-badge badge-rentado"><i class="ti ti-clock"></i> En préstamo</span>`;
-    const rentadoInfo=!disp?`<div class="fisico-rentado-info"><i class="ti ti-user"></i> <strong>${b.rentadoPor||'—'}</strong> · ${b.sucursal||'—'}${b.fechaDevolucion?`<br><i class="ti ti-calendar"></i> Devolución: ${formatDate(b.fechaDevolucion)}`:''}</div>`:'';
-    return `<div class="fisico-card">
-      <div class="fisico-cover" style="background:${cc.bg};">${statusBadge}
-        ${b.cover?`<img src="${b.cover}" alt="Portada" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;" onerror="this.style.display='none'">`
-          :`<div class="fisico-cover-fallback"><div class="book-cover-stripe"></div><div class="fisico-cover-title" style="color:${cc.text};">${b.title}</div><div style="font-size:10px;color:${cc.text};opacity:0.7;margin-top:4px;">${b.author}</div></div>`}
-      </div>
-      <div class="fisico-info">
-        <div class="fisico-title">${b.title}</div>
-        <div class="fisico-author">${b.author}</div>
-        <div class="fisico-cat-badge" style="background:${cc.badge_bg};color:${cc.badge_text};">${catLabel}</div>
-        ${rentadoInfo}
-      </div>
-    </div>`;
-  }).join('');
-}
-function formatDate(d){if(!d)return'';const[y,m,day]=d.split('-');return`${day}/${m}/${y}`;}
-
 // ── SUGERENCIAS ──
 function renderSugCatSelect(){
   document.getElementById('sugCat').innerHTML=CATEGORIES.filter(c=>c.id!=='todos').map(c=>`<option value="${c.id}">${c.label}</option>`).join('');
@@ -1002,14 +828,14 @@ function doLogin(){
 function showPanel(){
   document.getElementById('adminLogin').style.display='none';
   document.getElementById('adminPanel').style.display='block';
-  refreshAdminSelects();renderAdminList();renderAdminFisicoList();renderCatChips();renderAdminSug();renderAdminRegistros();updateSugBadge();
+  refreshAdminSelects();renderAdminList();renderCatChips();renderAdminSug();renderAdminRegistros();updateSugBadge();
 }
 function refreshAdminSelects(){
   const opts=CATEGORIES.filter(c=>c.id!=='todos').map(c=>`<option value="${c.id}">${c.label}</option>`).join('');
-  ['newCat','fNewCat','editCat','fEditCat'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=opts;});
+  ['newCat','editCat'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=opts;});
 }
 function switchAdminTab(tab){
-  ['digital','fisico','categorias','registros','sugerencias'].forEach(t=>{
+  ['digital','categorias','registros','sugerencias'].forEach(t=>{
     document.getElementById('atab-'+t).classList.toggle('active',t===tab);
     document.getElementById('apane-'+t).classList.toggle('active',t===tab);
   });
@@ -1071,73 +897,6 @@ function renderAdminList(){
   }).join('');
 }
 
-// Físico CRUD
-async function addFisico(){
-  const title=document.getElementById('fNewTitle').value.trim(),author=document.getElementById('fNewAuthor').value.trim();
-  const err=document.getElementById('fAddErr');
-  if(!title||!author){err.textContent='Título y autor son obligatorios.';return;}
-  err.textContent='';
-  fisicos.push({id:nextFisicoId++,title,author,cat:document.getElementById('fNewCat').value,desc:document.getElementById('fNewDesc').value.trim(),cover:document.getElementById('fNewCover').value.trim(),disponible:true,rentadoPor:'',sucursal:'',fechaDevolucion:''});
-  ['fNewTitle','fNewAuthor','fNewDesc','fNewCover'].forEach(i=>document.getElementById(i).value='');
-  document.getElementById('fCoverPreview').classList.remove('show');
-  renderAdminFisicoList();renderFisicos();
-  await saveFisicos();
-}
-function delFisico(id){
-  customConfirm('¿Eliminar este libro físico?',async()=>{
-    fisicos=fisicos.filter(f=>f.id!==id);renderAdminFisicoList();renderFisicos();
-    await saveFisicos();
-  });
-}
-function openFisicoEdit(id){
-  const b=fisicos.find(f=>f.id===id);if(!b)return;
-  refreshAdminSelects();
-  document.getElementById('fEditId').value=id;
-  document.getElementById('fEditTitle').value=b.title;
-  document.getElementById('fEditAuthor').value=b.author;
-  document.getElementById('fEditCat').value=b.cat;
-  document.getElementById('fEditDesc').value=b.desc||'';
-  document.getElementById('fEditCover').value=b.cover||'';
-  const disp=b.disponible===false||b.disponible==='false'||b.disponible==='FALSE';
-  document.getElementById('fEditDisponible').checked=disp;
-  document.getElementById('fEditRentadoPor').value=b.rentadoPor||'';
-  document.getElementById('fEditSucursal').value=b.sucursal||'';
-  document.getElementById('fEditFecha').value=b.fechaDevolucion||'';
-  document.getElementById('fEditErr').textContent='';
-  const prev=document.getElementById('fEditCoverPreview');
-  if(b.cover){prev.src=b.cover;prev.classList.add('show');}else prev.classList.remove('show');
-  toggleRentadoFields();
-  document.getElementById('fEditOverlay').classList.add('open');
-}
-function toggleRentadoFields(){
-  document.getElementById('rentadoFields').classList.toggle('show',document.getElementById('fEditDisponible').checked);
-}
-async function saveFisicoEdit(){
-  const id=parseInt(document.getElementById('fEditId').value),title=document.getElementById('fEditTitle').value.trim(),author=document.getElementById('fEditAuthor').value.trim();
-  const err=document.getElementById('fEditErr');
-  if(!title||!author){err.textContent='Título y autor son obligatorios.';return;}
-  const b=fisicos.find(f=>f.id===id);if(!b)return;
-  const enPrestamo=document.getElementById('fEditDisponible').checked;
-  b.title=title;b.author=author;b.cat=document.getElementById('fEditCat').value;b.desc=document.getElementById('fEditDesc').value.trim();b.cover=document.getElementById('fEditCover').value.trim();
-  b.disponible=!enPrestamo;
-  b.rentadoPor=enPrestamo?document.getElementById('fEditRentadoPor').value.trim():'';
-  b.sucursal=enPrestamo?document.getElementById('fEditSucursal').value.trim():'';
-  b.fechaDevolucion=enPrestamo?document.getElementById('fEditFecha').value:'';
-  closeEditModal('fEdit');renderAdminFisicoList();renderFisicos();
-  await saveFisicos();
-}
-function renderAdminFisicoList(){
-  const list=document.getElementById('adminFisicoList');
-  document.getElementById('adminFisicoCount').textContent='('+fisicos.length+')';
-  list.innerHTML=fisicos.map(b=>{
-    const catLabel=CATEGORIES.find(c=>c.id===b.cat)?.label||b.cat;
-    const thumb=b.cover?`<img class="admin-book-thumb" src="${b.cover}" onerror="this.style.visibility='hidden'" alt="">`:`<div class="admin-book-thumb" style="border:1px dashed #d1d5db;"></div>`;
-    const disp=b.disponible===true||b.disponible==='true'||b.disponible==='TRUE';
-    const dot=disp?`<div class="disponible-dot" style="background:#16a34a;" title="Disponible"></div>`:`<div class="disponible-dot" style="background:#d97706;" title="En préstamo"></div>`;
-    return `<div class="admin-book-item">${thumb}<div class="admin-book-info"><strong>${b.title}</strong><span>${b.author} · ${catLabel}</span></div>${dot}<div class="admin-book-actions"><button class="admin-edit-btn" onclick="openFisicoEdit(${b.id})"><i class="ti ti-edit"></i></button><button class="admin-del-btn" onclick="delFisico(${b.id})"><i class="ti ti-trash"></i></button></div></div>`;
-  }).join('');
-}
-
 // Categorías
 async function addCategory(){
   const name=document.getElementById('newCatName').value.trim(),err=document.getElementById('catErr');
@@ -1152,7 +911,7 @@ async function addCategory(){
 function delCategory(id){
   const cat=CATEGORIES.find(c=>c.id===id);
   if(!cat||cat.protected){alert('Esta categoría no se puede eliminar.');return;}
-  if(books.find(b=>b.cat===id)||fisicos.find(f=>f.cat===id)){alert('Reasigna los libros antes de eliminar esta categoría.');return;}
+  if(books.find(b=>b.cat===id)){alert('Reasigna los libros antes de eliminar esta categoría.');return;}
   customConfirm(`¿Eliminar la categoría "${cat.label}"?`,async()=>{
     CATEGORIES=CATEGORIES.filter(c=>c.id!==id);
     renderCatChips();renderTabs();refreshAdminSelects();renderSugCatSelect();
